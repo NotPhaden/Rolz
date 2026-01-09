@@ -1,8 +1,10 @@
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROLZ - Community Hub</title>
   <link rel="icon" type="image/png" href="logo.png">
+
   <style>
     body {
       margin: 0;
@@ -18,11 +20,12 @@
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
+      inset: 0;
       background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, transparent 70%);
       animation: pulse 6s infinite alternate;
       z-index: -2;
     }
+
     @keyframes pulse {
       from { transform: scale(1); opacity: 0.8; }
       to { transform: scale(1.3); opacity: 0.3; }
@@ -72,8 +75,10 @@
     .link::after {
       content: "";
       position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
       background: linear-gradient(120deg, transparent, rgba(255,215,0,0.5), transparent);
       transition: 0.5s;
     }
@@ -99,7 +104,6 @@
       position: fixed;
       top: -10px;
       color: #fff;
-      font-size: 1rem;
       z-index: 9999;
       user-select: none;
       pointer-events: none;
@@ -114,17 +118,22 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="logo">
       <img src="logo.png" alt="ROLZ Logo">
     </div>
+
     <h1>ROLZ Community Hub 🎄❄</h1>
 
     <a class="link" href="https://www.youtube.com/@rolzul" target="_blank">📺 YouTube</a>
     <a class="link" href="https://www.tiktok.com/@rolzul" target="_blank">🎵 TikTok</a>
     <a class="link" href="https://www.instagram.com/rolzul/" target="_blank">📸 Instagram</a>
     <a class="link" href="https://www.instagram.com/channel/Aba_VlS8_T77U8_g/" target="_blank">👥 Grup de broadcast Instagram</a>
+
+    <a class="link" href="AICI_PUI_LINK_INVITE_DISCORD" target="_blank">💬 Discord Server</a>
+
     <a class="link" href="https://www.tipeeestream.com/Rolz-Community/donation" target="_blank">💖 Donează (comision redus)</a>
     <a class="link" href="https://www.youtube.com/channel/UCt7E5k0pBf-CcOdKUExHaqQ/join" target="_blank">⭐ Devino Membru</a>
 
@@ -135,17 +144,16 @@
 
   <script>
     const snowCount = 50;
+
     for (let i = 0; i < snowCount; i++) {
       const snow = document.createElement('div');
-      snow.classList.add('snowflake');
+      snow.className = 'snowflake';
+      snow.innerText = '❄';
       snow.style.left = Math.random() * window.innerWidth + 'px';
-      snow.style.fontSize = Math.random() * 10 + 10 + 'px';
+      snow.style.fontSize = (Math.random() * 10 + 10) + 'px';
       snow.style.animationDuration = (Math.random() * 5 + 5) + 's';
       snow.style.opacity = Math.random();
-      snow.innerText = '❄';
       document.body.appendChild(snow);
     }
   </script>
 </body>
-
-
